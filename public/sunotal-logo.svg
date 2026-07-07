@@ -1,0 +1,22 @@
+<svg width="200" height="48" viewBox="0 0 200 48" xmlns="http://www.w3.org/2000/svg">
+  <!-- Sun + leaf icon -->
+  <g transform="translate(0,4)">
+    <!-- Sun rays -->
+    <circle cx="20" cy="20" r="7" fill="#F4A017"/>
+    <line x1="20" y1="4" x2="20" y2="9" stroke="#F4A017" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="20" y1="31" x2="20" y2="36" stroke="#F4A017" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="4" y1="20" x2="9" y2="20" stroke="#F4A017" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="31" y1="20" x2="36" y2="20" stroke="#F4A017" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="8.4" y1="8.4" x2="12" y2="12" stroke="#F4A017" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="28" y1="28" x2="31.6" y2="31.6" stroke="#F4A017" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="31.6" y1="8.4" x2="28" y2="12" stroke="#F4A017" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="8.4" y1="31.6" x2="12" y2="28" stroke="#F4A017" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Leaf overlay -->
+    <path d="M20 13 C26 13 30 18 28 26 C24 24 20 22 20 13Z" fill="#2A8C3F" opacity="0.9"/>
+    <path d="M20 26 Q20 30 20 33" stroke="#2A8C3F" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+  </g>
+  <!-- Text: Sunotal -->
+  <text x="48" y="30" font-family="'Satoshi','Inter',sans-serif" font-weight="800" font-size="22" fill="#0B2914" letter-spacing="-0.5">Sunotal</text>
+  <!-- Text: FARMS -->
+  <text x="49" y="42" font-family="'Satoshi','Inter',sans-serif" font-weight="500" font-size="10" fill="#2A8C3F" letter-spacing="3">FARMS</text>
+</svg>
