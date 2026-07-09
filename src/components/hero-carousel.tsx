@@ -1,19 +1,34 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { motion, AnimatePresence } from 'framer-motion';
 
-// import vegetables from '@/assets/sunotal/vegetables.jpg';
-// import mangoes from '@/assets/sunotal/mangoes.jpg';
-// import dairy from '@/assets/sunotal/dairy.jpg';
-const S3_BASE = "https://jcs-raju-sunotal-final.s3.us-east-1.amazonaws.com/";
+// Cleaned up Base S3 Bucket Path
+const S3_BASE: string = "https://jcs-raju-sunotal-final.s3.us-east-1.amazonaws.com";
 
-const vegetables = `${S3_BASE}/vegetables.jpg`;
-const mangoes = `${S3_BASE}/mangoes.jpg`;
-const dairy = `${S3_BASE}/dairy.jpg`;
+const vegetables: string = `${S3_BASE}/vegetables.jpg`;
+const mangoes: string = `${S3_BASE}/mangoes.jpg`;
+const dairy: string = `${S3_BASE}/dairy.jpg`;
 
-const slides = [
+interface Deal {
+  name: string;
+  price: string;
+  mrp: string;
+}
+
+interface Slide {
+  id: number;
+  bgColor: string;
+  textColor: string;
+  accentColor: string;
+  title: string;
+  subtitle: string;
+  image: string;
+  deals: Deal[];
+}
+
+const slides: Slide[] = [
   {
     id: 1,
     bgColor: 'bg-[#F0F7E8]',
@@ -56,7 +71,7 @@ const slides = [
 
 export function HeroCarousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
-  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [selectedIndex, setSelectedIndex] = useState<number>(0);
 
   const scrollPrev = useCallback(() => emblaApi && emblaApi.scrollPrev(), [emblaApi]);
   const scrollNext = useCallback(() => emblaApi && emblaApi.scrollNext(), [emblaApi]);
@@ -136,7 +151,7 @@ export function HeroCarousel() {
                       initial={{ opacity: 0, scale: 0.85, rotate: -4 }}
                       animate={{ opacity: 1, scale: 1, rotate: 0 }}
                       exit={{ opacity: 0, scale: 0.9 }}
-                      transition={{ duration: 0.65, type: 'spring' }}
+                      transition={{ duration: 0.65 }}
                       src={slide.image}
                       alt="Featured produce"
                       className="max-h-[75%] max-w-[80%] object-contain drop-shadow-2xl rounded-2xl"

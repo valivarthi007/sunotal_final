@@ -1,6 +1,6 @@
 // Define your clean global S3 Bucket URL path 
 // (Replace "sunotal-product-assets" with your exact bucket name if it's different)
-const S3_BASE_URL = "https://jcs-raju-sunotal-final.s3.us-east-1.amazonaws.com/";
+const S3_BASE_URL = "https://jcs-raju-sunotal-final.s3.us-east-1.amazonaws.com";
 
 export type ProductCategory = 'Vegetables' | 'Fruits' | 'Dairy' | 'Dry Fruits' | 'Grains';
 
