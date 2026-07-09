@@ -4,9 +4,14 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { motion, AnimatePresence } from 'framer-motion';
 
-import vegetables from '@/assets/sunotal/vegetables.jpg';
-import mangoes from '@/assets/sunotal/mangoes.jpg';
-import dairy from '@/assets/sunotal/dairy.jpg';
+// import vegetables from '@/assets/sunotal/vegetables.jpg';
+// import mangoes from '@/assets/sunotal/mangoes.jpg';
+// import dairy from '@/assets/sunotal/dairy.jpg';
+const S3_BASE = "https://jcs-raju-sunotal-final.s3.us-east-1.amazonaws.com/";
+
+const vegetables = `${S3_BASE}/vegetables.jpg`;
+const mangoes = `${S3_BASE}/mangoes.jpg`;
+const dairy = `${S3_BASE}/dairy.jpg`;
 
 const slides = [
   {

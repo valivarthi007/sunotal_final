@@ -1,15 +1,6 @@
-import vegetables from '@/assets/sunotal/vegetables.jpg';
-import fruits from '@/assets/sunotal/fruits.jpg';
-import dairy from '@/assets/sunotal/dairy.jpg';
-import dryFruits from '@/assets/sunotal/dry-fruits.jpg';
-import grains from '@/assets/sunotal/grains.jpg';
-import tomatoes from '@/assets/sunotal/tomatoes.jpg';
-import mangoes from '@/assets/sunotal/mangoes.jpg';
-import spinach from '@/assets/sunotal/spinach.jpg';
-import milk from '@/assets/sunotal/milk.jpg';
-import cashews from '@/assets/sunotal/cashews.jpg';
-import rice from '@/assets/sunotal/rice.jpg';
-import apples from '@/assets/sunotal/apples.jpg';
+// Define your clean global S3 Bucket URL path 
+// (Replace "sunotal-product-assets" with your exact bucket name if it's different)
+const S3_BASE_URL = "https://jcs-raju-sunotal-final.s3.us-east-1.amazonaws.com/";
 
 export type ProductCategory = 'Vegetables' | 'Fruits' | 'Dairy' | 'Dry Fruits' | 'Grains';
 
@@ -36,7 +27,7 @@ export const products: Product[] = [
     price: 40,
     originalPrice: 60,
     discountPercentage: 33,
-    image: tomatoes,
+    image: `${S3_BASE_URL}/tomatoes.jpg`,
     badge: 'Bestseller',
     organic: true,
     description: 'Farm-fresh ripe tomatoes, picked daily.',
@@ -49,7 +40,7 @@ export const products: Product[] = [
     price: 299,
     originalPrice: 450,
     discountPercentage: 33,
-    image: mangoes,
+    image: `${S3_BASE_URL}/mangoes.jpg`,
     badge: 'Seasonal',
     organic: true,
     description: 'Premium GI-tagged Alphonso mangoes.',
@@ -62,7 +53,7 @@ export const products: Product[] = [
     price: 30,
     originalPrice: 45,
     discountPercentage: 33,
-    image: spinach,
+    image: `${S3_BASE_URL}/spinach.jpg`,
     organic: true,
     description: 'Tender spinach leaves, pesticide-free.',
   },
@@ -74,7 +65,7 @@ export const products: Product[] = [
     price: 60,
     originalPrice: 72,
     discountPercentage: 17,
-    image: milk,
+    image: `${S3_BASE_URL}/milk.jpg`,
     badge: 'Daily Fresh',
     description: 'Pure cow milk, delivered fresh each morning.',
   },
@@ -86,7 +77,7 @@ export const products: Product[] = [
     price: 349,
     originalPrice: 499,
     discountPercentage: 30,
-    image: cashews,
+    image: `${S3_BASE_URL}/cashews.jpg`,
     description: 'Whole jumbo cashews, naturally dried.',
   },
   {
@@ -97,7 +88,7 @@ export const products: Product[] = [
     price: 95,
     originalPrice: 130,
     discountPercentage: 27,
-    image: rice,
+    image: `${S3_BASE_URL}/rice.jpg`,
     organic: true,
     description: 'Long-grain aged basmati, chemical-free farming.',
   },
@@ -109,7 +100,7 @@ export const products: Product[] = [
     price: 199,
     originalPrice: 300,
     discountPercentage: 34,
-    image: vegetables,
+    image: `${S3_BASE_URL}/vegetables.jpg`,
     badge: 'Value Pack',
     organic: true,
     description: 'Seasonal mix: tomatoes, capsicum, carrots & more.',
@@ -122,7 +113,7 @@ export const products: Product[] = [
     price: 249,
     originalPrice: 370,
     discountPercentage: 33,
-    image: fruits,
+    image: `${S3_BASE_URL}/fruits.jpg`,
     description: 'Curated mix of fresh seasonal fruits.',
   },
   {
@@ -133,7 +124,7 @@ export const products: Product[] = [
     price: 199,
     originalPrice: 280,
     discountPercentage: 29,
-    image: dairy,
+    image: `${S3_BASE_URL}/dairy.jpg`,
     badge: 'Popular',
     description: 'Milk 2L + Butter 500g + Curd 1kg.',
   },
@@ -145,7 +136,7 @@ export const products: Product[] = [
     price: 399,
     originalPrice: 550,
     discountPercentage: 27,
-    image: dryFruits,
+    image: `${S3_BASE_URL}/dry-fruits.jpg`,
     description: 'Premium mix: almonds, cashews, raisins & pistachios.',
   },
   {
@@ -156,7 +147,7 @@ export const products: Product[] = [
     price: 130,
     originalPrice: 180,
     discountPercentage: 28,
-    image: apples,
+    image: `${S3_BASE_URL}/apples.jpg`,
     organic: true,
     description: 'Crispy Shimla apples, imported grade A.',
   },
@@ -168,7 +159,7 @@ export const products: Product[] = [
     price: 349,
     originalPrice: 480,
     discountPercentage: 27,
-    image: grains,
+    image: `${S3_BASE_URL}/grains.jpg`,
     description: 'Wheat, rice, lentils & chickpeas combo.',
   },
 ];
